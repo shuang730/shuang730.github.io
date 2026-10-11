@@ -37,79 +37,75 @@ body{font-size:17px}
 .photo-dialog img[src="assets/switching-animation.webp"]{width:min(80vh,85vw);height:min(80vh,85vw);object-fit:fill;transform:rotate(90deg)}
 @media(max-width:600px){.pub-figures .pub-figure button[data-photo="assets/switching-animation.webp"]{height:228px}.pub-figures .pub-figure img[src="assets/switching-animation.webp"]{width:210px;height:100cqw}}
 
-/* Restrained editorial layout. */
-:root{--ink:#182433;--muted:#677381;--line:#e3e8ed;--blue:#2864a5}
-html{scroll-padding-top:95px}
-body{font:16px/1.8 Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
-.site-header{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
-.topnav{max-width:1100px;margin:0 auto;padding:19px 32px;border:0;position:static;background:transparent;gap:25px;flex-wrap:wrap;backdrop-filter:none}
-.topnav a{font-size:13px;color:var(--muted)}
-.topnav .nav-name{font:600 21px Georgia,'Times New Roman',serif;color:var(--ink);margin-right:auto}
-.topnav a:last-child{margin-left:0}
-#langToggle{font-size:12px;padding:4px 9px;background:#fff}
-.shell{display:block;max-width:1060px;padding:0 32px;margin:0 auto}
-.sidebar{position:static;display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:0 40px;text-align:left;padding:52px 0 32px;align-items:start}
-.avatar.portrait{grid-column:2;grid-row:1/6;width:235px;height:285px;margin:0;border-radius:2px}
+/* Minimal academic layout with a quiet sidebar and compact publication figures. */
+:root{--ink:#202833;--muted:#707986;--line:#e5e9ee;--blue:#2864a5}
+html{scroll-padding-top:30px}
+body{font:15px/1.8 Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+.shell{max-width:1160px;margin:0 auto;padding:45px 36px 0;display:grid;grid-template-columns:205px minmax(0,1fr);gap:54px;align-items:start}
+.sidebar{position:sticky;top:35px;text-align:left;display:block;padding:0 26px 25px 0;border-right:1px solid var(--line)}
+.avatar.portrait{width:155px;height:205px;margin:0 0 19px;border:0;border-radius:2px}
 .portrait img{object-position:5% center}
-.sidebar h1{grid-column:1;font:600 clamp(38px,5vw,54px)/1.15 Georgia,'Times New Roman',serif;letter-spacing:-.035em;margin:9px 0 12px}
-.degree{grid-column:1;font:19px/1.6 Georgia,'Times New Roman',serif;margin:0;color:var(--ink)}
-.role{grid-column:1;font:18px/1.6 Georgia,'Times New Roman',serif;color:var(--ink);margin:0}
-.social{grid-column:1;justify-content:flex-start;gap:20px;margin:24px 0 20px;flex-wrap:wrap}
-.social a{width:auto;height:auto;display:inline;border:0;border-radius:0;font:13px/1.6 Arial,Helvetica,sans-serif;color:var(--blue)}
+.sidebar h1{font:600 25px/1.25 Georgia,'Times New Roman',serif;letter-spacing:-.02em;color:var(--ink);margin:0 0 8px}
+.degree{font:15px/1.65 Georgia,'Times New Roman',serif;margin:0;color:var(--ink)}
+.role{font-size:12px;line-height:1.7;margin:4px 0 0;color:var(--muted)}
+.topnav{display:flex;flex-direction:column;align-items:flex-start;gap:0;position:static;background:transparent;backdrop-filter:none;border:0;border-top:1px solid var(--line);padding:18px 0 0;margin:24px 0 0;overflow:visible}
+.topnav a{display:block;font-size:13px;line-height:1.6;padding:7px 0;color:var(--muted)}
+.topnav a:first-child{color:var(--blue);font-weight:600}
+.topnav a:last-child{margin-left:0}
+#langToggle{font-size:12px;background:#fff;border:0;padding:7px 0;color:var(--blue)}
+.social{display:flex;flex-direction:column;align-items:flex-start;gap:10px;justify-content:flex-start;margin:22px 0}
+.social a{width:auto;height:auto;display:block;font:12px/1.7 Arial,Helvetica,sans-serif;color:var(--blue);border:0;border-radius:0}
 .social a:hover{background:transparent}
-.interests{grid-column:1/3;display:flex;align-items:baseline;gap:20px;text-align:left;border-top:0;padding:25px 0 0;margin-top:0}
-.interests h2{font:600 13px Arial,Helvetica,sans-serif;letter-spacing:.03em;color:var(--muted);margin:0;white-space:nowrap}
-.interests ul{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;line-height:1.7;color:var(--muted)}
+.social a[href="#publications"],.social a[href="#software"]{display:none}
+.interests{padding:17px 0 0;border-top:1px solid var(--line);text-align:left}
+.interests h2{font:600 12px Arial,Helvetica,sans-serif;margin:0 0 10px;color:var(--muted)}
+.interests ul{font-size:12px;line-height:2;color:var(--muted)}
 .interests li:before{display:none}
-.main{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);column-gap:36px}
-.main>section,.main>footer{grid-column:1/-1}
-section{padding:31px 0;border-top:1px solid var(--line)}
-h2{font:600 29px/1.35 Georgia,'Times New Roman',serif;letter-spacing:-.025em;color:var(--ink);margin-bottom:19px}
-.intro{padding-top:29px}
-.intro p{font-size:16px;line-height:1.85;max-width:920px}
-.section-top>a,.full-list{font-size:13px}
-.filters{gap:8px;margin:0 0 4px}
-.filters button{font-size:12px;background:#fff;border-color:var(--line)}
-.pub{grid-template-columns:40px minmax(0,1fr);gap:16px;padding:25px 0;border-color:var(--line)}
-.pub-number{font:400 27px Georgia,'Times New Roman',serif;color:#7d9bbf}
-.year{font-size:11px;line-height:1.5;padding-top:0}
-.pub h3{font:500 18px/1.55 Georgia,'Times New Roman',serif;color:var(--ink)}
-.pub p{font-size:13px;line-height:1.8}
-.pub>div:has(.pub-figures){display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,42%);column-gap:24px;align-items:start}
-.pub-title{grid-column:1}
-.pub>div:has(.pub-figures)>p{grid-column:1}
-.pub-figures{grid-column:2;grid-row:1/4;display:grid;grid-template-columns:1fr;gap:12px;max-width:none}
-.pub-figures .pub-figure{margin:0}
-.pub-figures .pub-figure button{padding:8px;border-color:var(--line);border-radius:2px}
-.pub-figures .pub-figure img{height:190px;max-height:none}
-.pub-figure figcaption{font-size:11px;line-height:1.6}
-.pub-figures .pub-figure:has(img[src*="mirror-composite"]){max-width:100%}
+.main{display:block;min-width:0}
+section{padding:29px 0;border-top:1px solid var(--line)}
+.intro{padding-top:0;border-top:0}
+h2{font:600 25px/1.4 Georgia,'Times New Roman',serif;color:var(--ink);letter-spacing:-.015em;margin:0 0 17px}
+.intro p{font-size:15px;line-height:1.85;margin-bottom:13px}
+.section-top>a,.full-list{font-size:12px}
+.filters{gap:7px;margin:0 0 3px}
+.filters button{font-size:11px;border-color:var(--line);background:#fff;border-radius:2px}
+.pub{grid-template-columns:28px minmax(0,1fr);gap:12px;padding:22px 0;border-bottom:1px solid var(--line)}
+.pub-number{font:400 16px/1.5 Georgia,'Times New Roman',serif;color:#71849a}
+.year{font-size:10px;line-height:1.6;padding:0;color:#939ca6}
+.pub h3{font:500 16px/1.55 Georgia,'Times New Roman',serif;color:var(--ink);margin-bottom:8px}
+.pub p{font-size:12px;line-height:1.7;color:var(--muted)}
+.pub>div:has(.pub-figures){display:grid;grid-template-columns:minmax(0,1fr) 215px;column-gap:22px;align-items:start}
+.pub-title,.pub>div:has(.pub-figures)>p{grid-column:1}
+.pub-figures{grid-column:2;grid-row:1/4;display:grid;grid-template-columns:1fr;gap:10px;max-width:none}
+.pub-figures .pub-figure{margin:0;max-width:none}
+.pub-figures .pub-figure button{padding:6px;border-color:var(--line);border-radius:2px}
+.pub-figures .pub-figure img{height:135px;max-height:none}
 .pub-figures .pub-figure img[src*="mirror-composite"]{height:auto;max-height:none}
-.pub-figures .pub-figure button[data-photo="assets/switching-animation.webp"]{height:208px}
-.pub-figures .pub-figure img[src="assets/switching-animation.webp"]{width:190px;height:100cqw}
-.scholar-records{font-size:13px}
-.entry h3{font:600 18px Georgia,'Times New Roman',serif}
-.entry p{font-size:14px}
-.date{font-size:12px}
-#software{grid-column:1}
-#neeko{grid-column:2}
+.pub-figure figcaption{font-size:10px;line-height:1.55;margin-top:5px}
+.pub-figures .pub-figure button[data-photo="assets/switching-animation.webp"]{height:149px}
+.pub-figures .pub-figure img[src="assets/switching-animation.webp"]{width:135px;height:100cqw}
+.scholar-records{font-size:12px}
+.entry{margin-bottom:21px}
+.entry h3{font:600 16px Georgia,'Times New Roman',serif}
+.entry p{font-size:13px}
+.date{font-size:11px}
 .project{padding:0;border:0;border-radius:0;background:transparent}
-.project h3{font:600 21px Georgia,'Times New Roman',serif;color:var(--ink)}
-.project p{font-size:14px;color:var(--muted)}
-.project .subtitle{font-size:12px}
-.chips span{font-size:11px;background:#f4f6f8;border-radius:2px}
-.software-link{font-size:13px;margin:15px 0}
-.software-preview{border-radius:2px}
-.software-caption{font-size:12px}
-.cat-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
-.cat-photo{border-color:var(--line);border-radius:2px;background:#fff}
-.cat-photo img{aspect-ratio:1/1;object-fit:cover}
-.cat-photo span{font-size:11px}
-footer{font-size:12px;margin-top:6px;padding:22px 0 30px}
-@media(min-width:1400px){.shell{padding-top:0}}
-@media(max-width:900px){.shell{padding:0 26px}.topnav{gap:17px;padding:17px 26px}.sidebar{grid-template-columns:minmax(0,1fr) 195px;gap:0 26px}.avatar.portrait{width:195px;height:255px}.pub>div:has(.pub-figures){grid-template-columns:minmax(0,1fr) 42%;column-gap:18px}.cat-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){html{scroll-padding-top:125px}.shell{padding:0 20px}.topnav{padding:13px 20px;gap:10px 17px;overflow:visible;white-space:normal;flex-wrap:wrap}.topnav .nav-name{width:100%;font-size:20px}.topnav a{font-size:12px}.sidebar{padding:31px 0 25px;grid-template-columns:minmax(0,1fr) 105px;gap:0 15px}.avatar.portrait{grid-column:2;grid-row:1/5;width:105px;height:166px}.sidebar h1{font-size:33px;margin:0 0 9px}.degree{font-size:16px}.role{font-size:14px}.social{gap:9px 14px;margin:16px 0 5px}.social a{font-size:12px;width:auto;height:auto}.interests{display:block;padding-top:22px}.interests h2{font-size:12px;margin-bottom:9px}.interests ul{font-size:12px;gap:5px 15px}.main{display:block}h2{font-size:26px}section{padding:26px 0}.intro p{font-size:15px}.pub{grid-template-columns:28px minmax(0,1fr);gap:12px;padding:21px 0}.pub-number{font-size:23px}.pub h3{font-size:17px}.pub>div:has(.pub-figures){display:block}.pub-figures{margin-top:15px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.pub-figures .pub-figure img{height:180px}.pub-figures .pub-figure button[data-photo="assets/switching-animation.webp"]{height:198px}.pub-figures .pub-figure img[src="assets/switching-animation.webp"]{width:180px;height:100cqw}.cat-gallery{max-width:none;grid-template-columns:repeat(4,minmax(0,1fr))}.cat-photo span{font-size:10px;padding:6px}.entry p{font-size:13px}}
-</style></head><body><header class="site-header"><nav class="topnav" aria-label="Main navigation"><a class="nav-name" href="/">Shuang Liang</a><a href="#about">About</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#software">Software</a><a href="#neeko">My Cat</a><a href="https://scholar.google.com/citations?user=ws3w1BIAAAAJ" target="_blank" rel="noopener" aria-label="Open Google Scholar">Scholar &nearr;</a><button id="langToggle" type="button" aria-label="Switch language">中文</button></nav></header><div class="shell"><aside class="sidebar"><div class="avatar portrait"><img src="assets/shuang-liang-coast.jpeg" alt="Shuang Liang by the ocean" width="1536" height="1152" fetchpriority="high"></div><h1>Shuang Liang</h1><div class="degree">Ph.D. in Optics</div><div class="role">Postdoctoral Researcher<br>University of Pittsburgh</div><div class="social"><a href="mailto:s3372617@gmail.com" aria-label="Email: s3372617@gmail.com" title="s3372617@gmail.com">Email</a><a href="https://www.linkedin.com/in/shuang-liang-3b5744352/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">LinkedIn</a><a href="https://scholar.google.com/citations?user=ws3w1BIAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">Scholar</a><a href="#publications" aria-label="Publications" title="Publications">P</a><a href="#software" aria-label="Software projects" title="Software projects">&lt;/&gt;</a></div><div class="interests"><h2>Research Interests</h2><ul><li>Photonics</li><li>Exciton-Polaritons</li><li>Ultrafast Spectroscopy</li><li>Optical Instrumentation</li></ul></div></aside><main class="main">
+.project h3{font:600 19px Georgia,'Times New Roman',serif;color:var(--ink)}
+.project .subtitle{font-size:11px}
+.project p{font-size:13px;color:var(--muted)}
+.chips span{font-size:10px;background:#f4f6f8;border-radius:2px}
+.software-link{font-size:12px;margin:14px 0}
+.software-preview{max-width:580px;border-radius:2px}
+.software-caption{font-size:11px}
+.cat-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:600px}
+.cat-photo{background:#fff;border-color:var(--line);border-radius:2px}
+.cat-photo img{aspect-ratio:2/3;object-fit:contain}
+.cat-photo span{font-size:11px;padding:7px}
+footer{font-size:11px;margin-top:12px;padding:20px 0 30px}
+@media(min-width:1400px){.shell{padding-top:50px}.sidebar{top:40px}}
+@media(max-width:900px){.shell{padding:30px 25px 0;grid-template-columns:175px minmax(0,1fr);gap:30px}.sidebar{padding-right:18px}.avatar.portrait{width:140px;height:185px}.sidebar h1{font-size:23px}.pub>div:has(.pub-figures){grid-template-columns:minmax(0,1fr) 170px;gap:16px}.topnav{gap:0}.cat-gallery{grid-template-columns:repeat(2,minmax(0,1fr));max-width:350px}}
+@media(max-width:650px){html{scroll-padding-top:20px}.shell{display:block;padding:25px 20px 0}.sidebar{position:static;display:grid;grid-template-columns:100px minmax(0,1fr);gap:0 20px;border-right:0;padding:0 0 23px}.avatar.portrait{grid-column:1;grid-row:1/5;width:100px;height:145px;margin:0}.sidebar h1{grid-column:2;font-size:25px;margin:2px 0 6px}.degree{grid-column:2;font-size:14px}.role{grid-column:2;font-size:12px}.social{grid-column:2;flex-direction:row;gap:8px 14px;flex-wrap:wrap;margin:12px 0 0}.social a{font-size:11px;width:auto;height:auto}.topnav{grid-column:1/-1;display:flex;flex-direction:row;flex-wrap:wrap;gap:3px 20px;padding:13px 0 0;margin:20px 0 0;border-top:1px solid var(--line);white-space:normal}.topnav a{font-size:12px;padding:4px 0}.topnav a:last-child{margin-left:0}#langToggle{font-size:12px;padding:4px 0}.interests{display:none}.intro{border-top:1px solid var(--line);padding-top:25px}.intro p{font-size:14px}section{padding:25px 0}h2{font-size:24px}.pub{grid-template-columns:24px minmax(0,1fr);gap:10px;padding:20px 0}.pub h3{font-size:16px}.pub>div:has(.pub-figures){display:block}.pub-figures{margin-top:13px;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:9px}.pub-figures .pub-figure img{height:140px}.pub-figures .pub-figure button[data-photo="assets/switching-animation.webp"]{height:154px}.pub-figures .pub-figure img[src="assets/switching-animation.webp"]{width:140px;height:100cqw}.cat-gallery{grid-template-columns:repeat(2,minmax(0,1fr));max-width:350px}}
+</style></head><body><div class="shell"><aside class="sidebar"><div class="avatar portrait"><img src="assets/shuang-liang-coast.jpeg" alt="Shuang Liang by the ocean" width="1536" height="1152" fetchpriority="high"></div><h1>Shuang Liang</h1><div class="degree">Ph.D. in Optics</div><div class="role">Postdoctoral Researcher<br>University of Pittsburgh</div><nav class="topnav" aria-label="Main navigation"><a href="#about">About</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#software">Software</a><a href="#neeko">My Cat</a><a href="https://scholar.google.com/citations?user=ws3w1BIAAAAJ" target="_blank" rel="noopener" aria-label="Open Google Scholar">Scholar &nearr;</a><button id="langToggle" type="button" aria-label="Switch language">中文</button></nav><div class="social"><a href="mailto:s3372617@gmail.com" aria-label="Email: s3372617@gmail.com" title="s3372617@gmail.com">Email</a><a href="https://www.linkedin.com/in/shuang-liang-3b5744352/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">LinkedIn</a><a href="https://scholar.google.com/citations?user=ws3w1BIAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">Scholar</a><a href="#publications" aria-label="Publications" title="Publications">P</a><a href="#software" aria-label="Software projects" title="Software projects">&lt;/&gt;</a></div><div class="interests"><h2>Research Interests</h2><ul><li>Photonics</li><li>Exciton-Polaritons</li><li>Ultrafast Spectroscopy</li><li>Optical Instrumentation</li></ul></div></aside><main class="main">
 <section class="intro" id="about"><h2>About</h2><p>I am a postdoctoral researcher in <strong>Prof. David Snoke's research group</strong> at the University of Pittsburgh, working on semiconductor optics and exciton-polariton condensates.</p><p>I received my <strong>Ph.D. in Optics</strong> from East China Normal University in 2024, where I studied perovskite microcavities, ultrafast lasing, and structured optical emission at the State Key Laboratory of Precision Spectroscopy.</p><p>My work combines optical system design and integration with time-, spatially, and angle-resolved spectroscopy. I build and troubleshoot experiments, characterize photonic devices, and develop MATLAB tools for measurement analysis and optical layout planning.</p><p>I also enjoy hands-on fabrication work in the cleanroom, including photolithography, spin coating, electron-beam evaporation, PECVD, and ICP-RIE, as well as using SEM to inspect and characterize micro- and nanostructures. Working across optical experiments and fabrication helps me better understand how devices are made and how their structures influence optical performance.</p></section>
 <section id="publications"><div class="section-top"><h2>Publications</h2><a href="https://scholar.google.com/citations?user=ws3w1BIAAAAJ" target="_blank" rel="noopener">View all &nearr;</a></div><div class="filters" aria-label="Filter publications"><button class="active" data-filter="all" aria-pressed="true">All</button><button data-filter="journal" aria-pressed="false">Journal articles</button><button data-filter="preprint" aria-pressed="false">Preprints</button></div><div id="pubs"></div><details class="scholar-records"><summary>Conference contributions and other Scholar records</summary><article class="pub"><span class="year"><b>[14]</b><br>2026</span><div><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ws3w1BIAAAAJ&citation_for_view=ws3w1BIAAAAJ:4TOpqqG69KYC" target="_blank" rel="noopener"><h3>Long-Range Coherence Between Spatially Separated Polariton Condensates via External Coupling</h3></a><p>S. Liang, H. Alnatah, Q. Yao, J. Beaumariage, et al.<br>APS Global Physics Summit 2026</p></div></article><article class="pub"><span class="year"><b>[15]</b><br>2025</span><div><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ws3w1BIAAAAJ&citation_for_view=ws3w1BIAAAAJ:KlAtU1dfN6UC" target="_blank" rel="noopener"><h3>Observation of strong coupling and optical nonlinearity in GaAs structures at room temperature</h3></a><p>S. Liang, H. Alnatah, Q. Wan, J. Beaumariage, et al.<br>SPIE</p></div></article><article class="pub"><span class="year"><b>[16]</b><br>2025</span><div><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ws3w1BIAAAAJ&citation_for_view=ws3w1BIAAAAJ:Zph67rFs4hoC" target="_blank" rel="noopener"><h3>Bose-Einstein condensation of polaritons at room temperature in a GaAs/AlGaAs structure</h3></a><p>S. Liang, H. Alnatah, Q. Yao, Q. Wan, et al.<br>APS Global Physics Summit 2025</p></div></article><article class="pub"><span class="year"><b>[17]</b><br></span><div><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ws3w1BIAAAAJ&citation_for_view=ws3w1BIAAAAJ:_kc_bZDykSQC" target="_blank" rel="noopener"><h3>Strong Coupling and Nonlinearity of Polaritons in GaAs/AlGaAs Structures up to Room Temperature</h3></a><p>D. W. Snoke, H. Alnatah, S. Liang, J. Beaumariage, et al.<br>Additional Scholar record; date and venue not listed</p></div></article><p>Alternate records: <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ws3w1BIAAAAJ&citation_for_view=ws3w1BIAAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener">encoder author preprint</a>; <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ws3w1BIAAAAJ&citation_for_view=ws3w1BIAAAAJ:Y0pCki6q_DkC" target="_blank" rel="noopener">Chinese-language WSe2 article record</a>.</p></details><a class="full-list" href="https://scholar.google.com/citations?user=ws3w1BIAAAAJ" target="_blank" rel="noopener">Full publication list on Google Scholar &nearr;</a></section>
 <section id="experience"><h2>Experience & Education</h2><div class="timeline"><article class="entry"><div class="date">2024 - Present</div><h3>University of Pittsburgh</h3><p>Postdoctoral Researcher | Department of Physics and Astronomy</p><p>GaAs/AlGaAs microcavities, condensate coherence, and mirror-mediated coupling.</p></article><article class="entry"><div class="date">Ph.D. awarded 2024</div><h3>East China Normal University</h3><p>Ph.D. in Optics | State Key Laboratory of Precision Spectroscopy</p><p>Perovskite microcavity lasers, ultrafast spectroscopy, and photonic devices.</p></article></div></section>
